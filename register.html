@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Registration | Elite Events Worldwide</title>
+  
+  <link rel="icon" type="image/png" href="logo.png">`n  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-color);
+      padding: 60px 0; /* Padding for scroll */
+      position: relative;
+    }
+
+    .auth-controls-container {
+      position: fixed;
+      top: 30px;
+      right: 30px;
+      display: flex;
+      gap: 15px;
+      z-index: 1000;
+    }
+
+    .auth-card {
+      width: 550px;
+      max-width: 90%; /* Prevent horizontal scroll */
+      padding: 60px 40px;
+      background: var(--bg-color);
+      border-radius: 24px;
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 30px 100px rgba(0,0,0,0.1);
+      text-align: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    .auth-logo {
+      height: 45px;
+      margin-bottom: 30px;
+      object-fit: contain;
+    }
+
+    .auth-card h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    .auth-card p {
+      opacity: 0.5;
+      font-size: 0.9rem;
+      margin-bottom: 40px;
+    }
+
+    .auth-form {
+      text-align: left;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .input-group {
+      margin-bottom: 5px;
+    }
+
+    .input-group.full {
+      grid-column: span 2;
+    }
+
+    .input-group label {
+      display: block;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 8px;
+      opacity: 0.6;
+      font-weight: 700;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 16px 20px;
+      border-radius: 10px;
+      border: 1px solid var(--glass-border);
+      background: var(--section-bg-alt);
+      color: var(--text-color);
+      font-family: 'Outfit', sans-serif;
+      transition: all 0.3s ease;
+    }
+
+    .input-group input:focus {
+      outline: none;
+      border-color: var(--gold-primary);
+    }
+
+    .auth-btn {
+      width: 100%;
+      grid-column: span 2;
+      background: var(--gold-primary);
+      color: white;
+      padding: 18px;
+      border: none;
+      border-radius: 12px;
+      font-weight: 700;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+      margin-top: 20px;
+    }
+
+    .auth-btn:hover {
+      background: var(--gold-dark);
+      transform: translateY(-2px);
+    }
+
+    .auth-footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      grid-column: span 2;
+    }
+
+    .auth-footer a {
+      color: var(--gold-primary);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    @media (max-width: 1024px) {
+      body { padding: 40px 0; }
+      .auth-card {
+        width: 100%;
+        max-width: 92%;
+        border-radius: 20px;
+        padding: 60px 25px 40px;
+      }
+      .auth-form { 
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+      }
+      .input-group { width: 100% !important; }
+      .auth-btn { width: 100% !important; }
+      .auth-controls-container { top: 20px; right: 20px; }
+    }
+
+    [dir="rtl"] .auth-controls-container { right: auto; left: 30px; }
+    [dir="rtl"] .auth-form { text-align: right; }
+  </style>
+</head>
+<body data-theme="dark">
+
+  <!-- AUTH CONTROLS -->
+  <div class="auth-controls-container">
+    <button class="btn-icon-luxe" id="rtl-toggle" title="Switch Language Direction" style="background: rgba(255,255,255,0.05); color: var(--text-color);"><i class="fas fa-globe"></i></button>
+    <button class="btn-icon-luxe" id="theme-toggle" title="Toggle Darkness" style="background: rgba(255,255,255,0.05); color: var(--text-color);"><i class="fas fa-moon"></i></button>
+  </div>
+
+  <div class="auth-card">
+    <a href="index.html"><img src="logo.png" alt="Elite Events" class="auth-logo"></a>
+    <h1>Apply for Access</h1>
+    <p>Submit your credentials for executive verification.</p>
+
+    <form class="auth-form" onsubmit="event.preventDefault(); window.location.href='dashboard.html';">
+      <div class="input-group">
+        <label>First Name</label>
+        <input type="text" placeholder="Lord" required>
+      </div>
+      <div class="input-group">
+        <label>Last Name</label>
+        <input type="text" placeholder="Sterling" required>
+      </div>
+      <div class="input-group full">
+        <label>Corporate Entity</label>
+        <input type="text" placeholder="Mayfair Global Hub" required>
+      </div>
+      <div class="input-group full">
+        <label>Executive Email</label>
+        <input type="email" placeholder="lord.sterling@mayfair.com" required>
+      </div>
+      <div class="input-group full">
+        <label>Strategic Key</label>
+        <input type="password" placeholder="••••••••" required>
+      </div>
+      <button type="submit" class="auth-btn">Request Board Approval</button>
+      
+      <div class="auth-footer">
+        Already part of the inner circle? <a href="login.html">Authorize Presence</a>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Elite Events Worldwide</title>
+  
+  <link rel="icon" type="image/png" href="logo.png">`n  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-color);
+      padding: 60px 0; /* Vertical breathing room */
+      position: relative;
+    }
+
+    .auth-controls-container {
+      position: fixed;
+      top: 30px;
+      right: 30px;
+      display: flex;
+      gap: 15px;
+      z-index: 1000;
+    }
+
+    .auth-card {
+      width: 450px;
+      max-width: 90%; /* Prevent horizontal scroll */
+      padding: 60px 40px;
+      background: var(--bg-color);
+      border-radius: 24px;
+      border: 1px solid var(--glass-border);
+      box-shadow: 0 30px 100px rgba(0,0,0,0.1);
+      text-align: center;
+      position: relative;
+      z-index: 10;
+    }
+
+    .auth-logo {
+      height: 50px;
+      margin-bottom: 40px;
+      object-fit: contain;
+    }
+
+    .auth-card h1 {
+      font-size: 2.2rem;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .auth-card p {
+      opacity: 0.5;
+      font-size: 0.9rem;
+      margin-bottom: 40px;
+    }
+
+    .auth-form {
+      text-align: left;
+    }
+
+    .input-group {
+      margin-bottom: 25px;
+    }
+
+    .input-group label {
+      display: block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      opacity: 0.6;
+      font-weight: 700;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 18px 20px;
+      border-radius: 12px;
+      border: 1px solid var(--glass-border);
+      background: var(--section-bg-alt);
+      color: var(--text-color);
+      font-family: 'Outfit', sans-serif;
+      transition: all 0.3s ease;
+    }
+
+    .input-group input:focus {
+      outline: none;
+      border-color: var(--gold-primary);
+      box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
+    }
+
+    .auth-btn {
+      width: 100%;
+      background: var(--gold-primary);
+      color: white;
+      padding: 18px;
+      border: none;
+      border-radius: 12px;
+      font-weight: 700;
+      font-family: 'Outfit', sans-serif;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: var(--transition-smooth);
+      margin-top: 10px;
+    }
+
+    .auth-btn:hover {
+      background: var(--gold-dark);
+      transform: translateY(-2px);
+    }
+
+    .auth-footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    .auth-footer a {
+      color: var(--gold-primary);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    /* Background Elements */
+    .auth-bg-blob {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+      top: -300px;
+      left: -300px;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    @media (max-width: 500px) {
+      .auth-card {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .auth-controls-container { top: 20px; right: 20px; }
+    }
+
+    [dir="rtl"] .auth-controls-container { right: auto; left: 30px; }
+    [dir="rtl"] .auth-form { text-align: right; }
+  </style>
+</head>
+<body data-theme="dark">
+
+  <div class="auth-bg-blob"></div>
+
+  <!-- AUTH CONTROLS -->
+  <div class="auth-controls-container">
+    <button class="btn-icon-luxe" id="rtl-toggle" title="Switch Language Direction" style="background: rgba(255,255,255,0.05); color: var(--text-color);"><i class="fas fa-globe"></i></button>
+    <button class="btn-icon-luxe" id="theme-toggle" title="Toggle Darkness" style="background: rgba(255,255,255,0.05); color: var(--text-color);"><i class="fas fa-moon"></i></button>
+  </div>
+
+  <div class="auth-card">
+    <a href="index.html"><img src="logo.png" alt="Elite Events" class="auth-logo"></a>
+    <h1>Portal Access</h1>
+    <p>Please enter your executive credentials.</p>
+
+    <form class="auth-form" onsubmit="event.preventDefault(); window.location.href='dashboard.html';">
+      <div class="input-group">
+        <label>Corporate Email</label>
+        <input type="email" placeholder="admin@eliteevents.com" required>
+      </div>
+      <div class="input-group">
+        <label>Executive Key</label>
+        <input type="password" placeholder="••••••••" required>
+      </div>
+      <button type="submit" class="auth-btn">Authorize Entry</button>
+    </form>
+
+    <div class="auth-footer">
+      New to the inner circle? <a href="register.html">Apply for Access</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

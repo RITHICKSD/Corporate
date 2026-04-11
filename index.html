@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elite Events | Worldwide Luxury Corporate Experiences</title>
+  <meta name="description" content="Redefining corporate synergy through bespoke team experiences and architectural event planning.">
+  
+  <link rel="icon" type="image/png" href="logo.png">`n  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <header>
+    <div class="nav-box">
+      <div class="logo-wrap">
+        <a href="index.html"><img src="logo.png" alt="Elite Events" class="logo-img"></a>
+      </div>
+
+      <nav class="nav-links-center">
+        <div class="dropdown-parent">
+          <a href="index.html" class="nav-link-item">Home <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px; opacity: 0.5;"></i></a>
+          <div class="dropdown-child">
+            <a href="index.html" class="dropdown-link">Home 1</a>
+            <a href="home2.html" class="dropdown-link">Home 2</a>
+          </div>
+        </div>
+        <a href="about.html" class="nav-link-item">About</a>
+        <a href="services.html" class="nav-link-item">Services</a>
+        <a href="contact.html" class="nav-link-item">Contact</a>
+        <div class="dropdown-parent">
+          <a href="#" class="nav-link-item">Dashboard <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px; opacity: 0.5;"></i></a>
+          <div class="dropdown-child">
+            <a href="dashboard.html" class="dropdown-link">User Dashboard</a>
+            <a href="admin.html" class="dropdown-link">Admin Dashboard</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="nav-actions-right">
+        <button class="btn-icon-luxe" id="rtl-toggle" title="Switch Language Direction"><i class="fas fa-globe"></i></button>
+        <button class="btn-icon-luxe" id="theme-toggle" title="Toggle Darkness"><i class="fas fa-moon"></i></button>
+        <div class="mobile-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <a href="login.html" class="btn-login-premium">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAV DRAWER (INTERACTIVE) -->
+  <div class="mobile-nav">
+    <button class="mobile-close-btn" aria-label="Close Menu">&times;</button>
+    <div class="mobile-nav-group">
+      <a href="#" class="mobile-dropdown-toggle">Home <i class="fas fa-chevron-down" style="font-size: 0.8rem; margin-left: 10px; opacity: 0.5;"></i></a>
+      <div class="mobile-submenu">
+        <a href="index.html" class="sub-link">Home 1</a>
+        <a href="home2.html" class="sub-link">Home 2</a>
+      </div>
+    </div>
+    
+    <div class="mobile-nav-group">
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="mobile-nav-group">
+      <a href="#" class="mobile-dropdown-toggle">Dashboard <i class="fas fa-chevron-down" style="font-size: 0.8rem; margin-left: 10px; opacity: 0.5;"></i></a>
+      <div class="mobile-submenu">
+        <a href="dashboard.html" class="sub-link">User Dashboard</a>
+        <a href="admin.html" class="sub-link">Admin Dashboard</a>
+      </div>
+    </div>
+
+    <div class="login-item" style="margin-top: 40px;">
+      <a href="login.html" class="btn-login-premium" style="display: block; text-align: center; font-size: 1.1rem; padding: 20px; border-radius: 12px; font-family: 'Outfit', sans-serif;">Login</a>
+    </div>
+  </div>
+
+  <!-- 1. HERO - SIGNATURE ENTRANCE -->
+  <section class="hero-v1" style="background-image: url('image1.jpg');">
+    <div class="hero-overlay"></div>
+    <div class="container hero-box">
+      <span class="accent-tag"></span>
+      <h1 class="main-title" style="letter-spacing: 0.05em; margin-bottom: 40px;">Crafting Extraordinary <br> Corporate Legacies</h1>
+      <p class="sub-desc" style="max-width: 600px; color: #fff; opacity: 0.85; line-height: 2; margin-bottom: 50px;">Architecting high-stakes corporate summits and bespoke retreats that transform organizational culture through precision and unmatched luxury.</p>
+      <div class="hero-cta-group">
+        <a href="#services" class="btn-login-premium">Explore Experiences</a>
+        <a href="#portfolio" class="btn-icon-luxe" style="width: auto; height: auto; padding: 12px 30px; border-radius: 50px; color: #fff;">View Portfolio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. TRUSTED BY - HORIZONTAL LOGOS -->
+  <section style="padding: 100px 0; background: var(--bg-color);">
+    <div class="container" style="text-align: center;">
+      <span class="accent-tag" style="margin-bottom: 40px; opacity: 0.6;">Partnering With Global Fortune 1000 Leaders</span>
+      <div class="grid-4" style="opacity: 0.5; filter: grayscale(1); align-items: center;">
+        <h3 style="font-family: inherit; font-size: 1.5rem;">GOLDMAN SACHS</h3>
+        <h3 style="font-family: inherit; font-size: 1.5rem;">MORGAN STANLEY</h3>
+        <h3 style="font-family: inherit; font-size: 1.5rem;">TESLA</h3>
+        <h3 style="font-family: inherit; font-size: 1.5rem;">APPLE</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. IDENTITY - LEFT ALIGNED FOCUS -->
+  <section style="background: var(--section-bg-alt);">
+    <div class="container grid-2">
+      <div class="section-head-left">
+        <span class="accent-tag">Our Identity</span>
+        <h2 class="main-title">The Curators <br> of Excellence</h2>
+        <p>Since 1998, Elite Events has operated at the intersection of high-stakes corporate strategy and world-class luxury experiences.</p>
+        <br>
+        <p>Our commitment is beyond planning; we architect environments that foster innovation, leadership, and unwavering alignment.</p>
+      </div>
+      <div>
+        <img src="image1.jpg" alt="Excellence" style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-premium);">
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. PILLARS - THREE COLUMN GRID -->
+  <section>
+    <div class="container">
+      <div class="section-head-center">
+        <span class="accent-tag">The Philosophy</span>
+        <h2 class="main-title">The Foundation of Impact</h2>
+      </div>
+      <div class="grid-3">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-bullseye"></i></div>
+          <h3>Absolute Precision</h3>
+          <p style="margin-top: 15px; line-height: 1.8;">Every second is accounted for. We operate with a 'zero-error' protocol across every global event, ensuring your timeline is respected with military precision.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-shield-halved"></i></div>
+          <h3>Discreet Agility</h3>
+          <p style="margin-top: 15px; line-height: 1.8;">For high-profile boards, we provide absolute privacy and seamless situational management. We act as your invisible shield in complex environments.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-globe-americas"></i></div>
+          <h3>Global Access</h3>
+          <p style="margin-top: 15px; line-height: 1.8;">Instant priority at the world's most sought-after venues. Our network opens doors to private estates and restricted summits from Dubai to the Davos peaks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. SHOWCASE - SPLIT ALTERNATING (Row 1) -->
+  <section style="padding-bottom: 0;">
+    <div class="container grid-2" style="align-items: stretch;">
+      <div>
+        <img src="image1.jpg" alt="Signature Event" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+      </div>
+      <div style="display: flex; flex-direction: column; justify-content: center; padding: 60px;">
+        <span class="accent-tag" style="margin-bottom: 25px;">Exhibition #01</span>
+        <h2 class="main-title" style="margin-bottom: 35px;">The Annual <br> Strategy Summit</h2>
+        <p style="margin-bottom: 40px;">Transformative three-day deep dives in private European chateaus. We handle everything from the initial visa protocols to the final executive wrap-up.</p>
+        <br>
+        <a href="#" style="color: var(--gold-primary); font-weight: 600;">Inquire Signature Access →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. NETWORK - FULL DEPTH STATS -->
+  <section style="background: var(--navy-deep); color: white; border-radius: 40px; margin: 40px; padding: 120px 0;">
+    <div class="container">
+      <div class="section-head-center">
+        <span class="accent-tag">Global Footprint</span>
+        <h2 class="main-title" style="color: white;">Empowering 45 Global Cities</h2>
+      </div>
+      <div class="grid-4" style="text-align: center;">
+        <div><h2 style="font-size: 4rem; color: var(--gold-primary);">500+</h2><p style="opacity: 0.6;">Events Managed</p></div>
+        <div><h2 style="font-size: 4rem; color: var(--gold-primary);">12K</h2><p style="opacity: 0.6;">Executive Attendees</p></div>
+        <div><h2 style="font-size: 4rem; color: var(--gold-primary);">100%</h2><p style="opacity: 0.6;">Privacy Maintained</p></div>
+        <div><h2 style="font-size: 4rem; color: var(--gold-primary);">28YR</h2><p style="opacity: 0.6;">Industry Legacy</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. PROCESS - HORIZONTAL STEPPER -->
+  <section>
+    <div class="container">
+      <div class="section-head-center">
+        <span class="accent-tag">The Methodology</span>
+        <h2 class="main-title">The Platinum Journey</h2>
+      </div>
+      <div class="grid-4">
+        <div style="border-top: 2px solid var(--gold-primary); padding-top: 30px;">
+          <span style="font-size: 2rem; color: var(--gold-primary);">01</span>
+          <h3>Objective Discovery</h3>
+          <p>We begin by auditing your current organizational culture and goal set.</p>
+        </div>
+        <div style="border-top: 2px solid var(--gold-primary); padding-top: 30px;">
+          <span style="font-size: 2rem; color: var(--gold-primary);">02</span>
+          <h3>Curation & Mockup</h3>
+          <p>A full sensory presentation of the venue, catering, and schedule.</p>
+        </div>
+        <div style="border-top: 2px solid var(--gold-primary); padding-top: 30px;">
+          <span style="font-size: 2rem; color: var(--gold-primary);">03</span>
+          <h3>Elite Deployment</h3>
+          <p>On-site concierge teams handle every micro-interaction flawlessly.</p>
+        </div>
+        <div style="border-top: 2px solid var(--gold-primary); padding-top: 30px;">
+          <span style="font-size: 2rem; color: var(--gold-primary);">04</span>
+          <h3>Data Synthesis</h3>
+          <p>Full reporting on team engagement and cultural shift metrics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. SHOWCASE - SPLIT ALTERNATING (Row 2 - Reversed) -->
+  <section style="padding-top: 0; background: var(--section-bg-alt);">
+    <div class="container grid-2" style="align-items: stretch;">
+      <div style="display: flex; flex-direction: column; justify-content: center; padding: 60px;">
+        <span class="accent-tag" style="margin-bottom: 25px;">Exhibition #02</span>
+        <h2 class="main-title" style="margin-bottom: 35px;">Bespoke <br> Yacht Summits</h2>
+        <p style="margin-bottom: 40px;">Private offshore negotiations for M&A and high-level board decisions. Complete secure communications and Michelin-level hosting.</p>
+        <br>
+        <a href="#" style="color: var(--gold-primary); font-weight: 600;">View Maritime Portfolio →</a>
+      </div>
+      <div>
+        <img src="image1.jpg" alt="Yacht Event" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. TESTIMONIALS - CENTERED PREMIUM CARD -->
+  <section>
+    <div class="container">
+      <div class="feature-card" style="text-align: center; max-width: 900px; margin: 0 auto; background: var(--navy-base); color: white;">
+        <p style="font-size: 1.5rem; line-height: 1.8; font-style: italic; opacity: 0.9;">"Elite Events doesn't just manage logistics; they manage outcomes. Our 2025 Global Alignment retreat was the single most productive corporate event in our 40-year history."</p>
+        <br><br>
+        <span class="accent-tag" style="color: var(--gold-primary);">Marcus Thorne, CEO - Global Capital</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10. VENUES - MASONRY STYLE -->
+  <section id="portfolio">
+    <div class="container">
+      <div class="section-head-center">
+        <span class="accent-tag">The Destinations</span>
+        <h2 class="main-title">Infinite Possibilities</h2>
+      </div>
+      <div class="grid-3">
+        <img src="image1.jpg" alt="Venue 1" style="width: 100%; height: 400px; object-fit: cover; border-radius: 20px; transition: transform 0.5s;">
+        <img src="image1.jpg" alt="Venue 2" style="width: 100%; height: 300px; object-fit: cover; border-radius: 20px; margin-top: 50px;">
+        <img src="image1.jpg" alt="Venue 3" style="width: 100%; height: 400px; object-fit: cover; border-radius: 20px;">
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. SIGNATURE RETREATS - LUXURY CARDS -->
+  <section style="background: var(--section-bg-alt);">
+    <div class="container">
+      <div class="section-head-center">
+        <span class="accent-tag">The Platinum Collection</span>
+        <h2 class="main-title">2026 Signature Retreats</h2>
+      </div>
+      <div class="grid-2">
+        <!-- Card 1 -->
+        <div class="retreat-card" style="background-image: url('image1.jpg'); background-size: cover; background-position: center;">
+          <div class="retreat-card-content">
+            <span class="accent-tag" style="color: var(--gold-light); font-size: 0.7rem; letter-spacing: 2px;">Switzerland • March 2026</span>
+            <h3 class="retreat-title" style="color: white;">Alpine Summit | St. Moritz</h3>
+            <p class="retreat-desc" style="color: rgba(255,255,255,0.8);">A 4-day intensive for technology sector executives. Focus on decentralized leadership and disruptive innovation in the heart of the Alps.</p>
+            <a href="#" class="btn-login-premium" style="display: inline-block; width: fit-content;">Request Invitation</a>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="retreat-card" style="background-image: url('image1.jpg'); background-size: cover; background-position: center;">
+          <div class="retreat-card-content">
+            <span class="accent-tag" style="color: var(--gold-light); font-size: 0.7rem; letter-spacing: 2px;">Kenya • June 2026</span>
+            <h3 class="retreat-title" style="color: white;">Safari Deep Dive | Masai Mara</h3>
+            <p class="retreat-desc" style="color: rgba(255,255,255,0.8);">Off-grid resilience training combined with sustainable conservation strategy workshops. Connect with nature and your core leadership values.</p>
+            <a href="#" class="btn-login-premium" style="display: inline-block; width: fit-content;">Request Invitation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 12. CASE STUDY - FULL DEPTH ENHANCED -->
+  <section style="padding: 0;">
+    <div style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('image1.jpg') center/cover; height: 800px; display: flex; align-items: center; position: relative;">
+      <div class="container" style="position: relative; z-index: 2; color: white;">
+        <div class="grid-2" style="align-items: center; gap: 100px;">
+          <div>
+            <span class="accent-tag">The Impact Study</span>
+            <h2 class="main-title" style="color: white; margin-bottom: 40px;">The Global Unity <br> Transformation</h2>
+            <p style="font-size: 1.2rem; opacity: 0.9; line-height: 1.8; margin-bottom: 30px;">How we unified 4,000 executives across 12 countries in a singular 24-hour synchronized event that redefined corporate alignment for the digital age.</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 50px;">
+              <div>
+                <h4 style="color: var(--gold-primary); margin-bottom: 10px;">The Challenge</h4>
+                <p style="font-size: 0.95rem; opacity: 0.7; line-height: 1.6;">Fragmented leadership teams and cultural silos preventing a unified global strategy deployment across four continents.</p>
+              </div>
+              <div>
+                <h4 style="color: var(--gold-primary); margin-bottom: 10px;">The Outcome</h4>
+                <p style="font-size: 0.95rem; opacity: 0.7; line-height: 1.6;">A 200% increase in cross-departmental collaboration and the successful launch of a 5-year strategic roadmap within 48 hours.</p>
+              </div>
+            </div>
+
+            <a href="#" class="btn-login-premium" style="margin-top: 60px; display: inline-block;">Download the Full Whitepaper</a>
+          </div>
+          <div style="text-align: center;">
+            <div style="border: 1px solid var(--gold-primary); padding: 40px; border-radius: 20px; background: rgba(0,0,0,0.4); backdrop-filter: blur(10px);">
+              <h3 style="color: var(--gold-primary); font-size: 3rem;">94%</h3>
+              <p style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; margin-top: 10px;">Engagement Growth</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13. LEADERSHIP - CLEAN FLEX -->
+  <section>
+    <div class="container">
+      <div class="section-head-center">
+        <span class="accent-tag">Our Board</span>
+        <h2 class="main-title">Architects of Experience</h2>
+      </div>
+      <div class="grid-3" style="text-align: center;">
+        <div>
+          <img src="image1.jpg" alt="Leader" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; margin-bottom: 20px;">
+          <h3>Julian Thorne</h3>
+          <p>CEO & Founder</p>
+        </div>
+        <div>
+          <img src="image1.jpg" alt="Leader" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; margin-bottom: 20px;">
+          <h3>Elena Rossi</h3>
+          <p>VP Global Venues</p>
+        </div>
+        <div>
+          <img src="image1.jpg" alt="Leader" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; margin-bottom: 20px;">
+          <h3>Marcus Chen</h3>
+          <p>Chief Strategy Officer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 14. MEMBERSHIP - CENTERED CTA -->
+  <section style="background: var(--navy-deep); color: white; text-align: center;">
+    <div class="container">
+      <span class="accent-tag">Priority Enrollment</span>
+      <h2 class="main-title" style="color: white;">The Inner Circle Access</h2>
+      <p style="max-width: 700px; margin: 0 auto 50px;">Join our exclusive corporate membership to receive 24/7 dedicated concierge planners and priority booking at our proprietary global venues.</p>
+      <a href="#" class="btn-login-premium" style="padding: 20px 60px;">Apply for Membership</a>
+    </div>
+  </section>
+
+  <!-- 15. FAQ & CONTACT - REFINED CONCIERGE -->
+  <section style="background: var(--bg-color);">
+    <div class="container grid-2" style="align-items: flex-start; gap: 120px;">
+      <div class="faq-box-luxe">
+        <span class="accent-tag">The Concierge FAQ</span>
+        <h2 class="main-title" style="margin-bottom: 50px;">Common <br> Inquiries</h2>
+        
+        <div style="margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px solid var(--gray-light);">
+          <h4 style="font-size: 1.25rem; color: var(--gold-primary); margin-bottom: 15px;">What is the typical lead time?</h4>
+          <p style="font-size: 1rem; opacity: 0.7; line-height: 1.8;">We recommend 6-9 months for international summits, though our agile luxury deployment teams can execute bespoke domestic retreats in as little as 30 days.</p>
+        </div>
+
+        <div style="margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px solid var(--gray-light);">
+          <h4 style="font-size: 1.25rem; color: var(--gold-primary); margin-bottom: 15px;">Do you handle international security?</h4>
+          <p style="font-size: 1rem; opacity: 0.7; line-height: 1.8;">Absolutely. We partner with tier-one global security specialized in corporate diplomatic protection for all sensitive board-level engagements.</p>
+        </div>
+
+        <div style="margin-bottom: 40px; padding-bottom: 30px; border-bottom: 1px solid var(--gray-light);">
+          <h4 style="font-size: 1.25rem; color: var(--gold-primary); margin-bottom: 15px;">Can you accommodate Michelin caterers?</h4>
+          <p style="font-size: 1rem; opacity: 0.7; line-height: 1.8;">Our culinary partnerships include Michelin-star chefs globally, offering tailored menus that reflect both local heritage and dietary precision.</p>
+        </div>
+      </div>
+
+      <div class="concierge-form" style="background: var(--navy-deep); padding: 70px; border-radius: var(--border-radius-lg);">
+        <h3 style="color: white; font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-bottom: 15px;">Request a Consultation</h3>
+        <p style="color: rgba(255,255,255,0.6); margin-bottom: 45px;">Direct priority line for new executive inquiries. A senior partner will respond within 4 business hours.</p>
+        
+        <form style="display: flex; flex-direction: column; gap: 20px;">
+          <input type="text" placeholder="Full Name" style="padding: 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; width: 100%;">
+          <input type="email" placeholder="Corporate Email" style="padding: 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; width: 100%;">
+          <textarea placeholder="Tell us more about your vision" rows="4" style="padding: 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: white; width: 100%;"></textarea>
+          <button class="btn-login-premium" style="border: none; width: 100%; padding: 22px; cursor: pointer;">Connect with a Partner</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="padding: 100px 0; background: var(--navy-deep); color: white;">
+    <div class="container grid-4">
+      <div>
+        <a href="index.html"><img src="logo.png" alt="Elite Events" style="height: 50px; margin-bottom: 30px; object-fit: contain;"></a>
+        <p style="opacity: 0.6; font-size: 0.9rem;">Setting the standard for corporate excellence since 1998. Globally recognized, locally perfected.</p>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 30px;">Architecture</h4>
+        <ul style="list-style: none; opacity: 0.6; font-size: 0.9rem; line-height: 2.2;">
+          <li>Strategy Summits</li>
+          <li>Board Retreats</li>
+          <li>Incentive Travel</li>
+          <li>Gala Productions</li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 30px;">Navigate</h4>
+        <ul style="list-style: none; opacity: 0.6; font-size: 0.9rem; line-height: 2.2;">
+          <li><a href="about.html">Our Identity</a></li>
+          <li><a href="services.html">The Services</a></li>
+          <li><a href="contact.html">Connect</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 30px;">Global Office</h4>
+        <p style="opacity: 0.6; font-size: 0.9rem;">123 Mayfair Avenue<br>London, UK W1J 7JZ<br><br>concierge@eliteevents.com</p>
+      </div>
+    </div>
+    <div class="container" style="margin-top: 100px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; opacity: 0.4; font-size: 0.8rem;">
+      <p>&copy; 2026 Elite Events Worldwide. All rights Reserved.</p>
+      <p>Luxury Partnered by CTEP</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
