@@ -110,12 +110,22 @@ header {
   width: 100%;
   height: 90px;
   z-index: 1000;
-  background: var(--header-bg);
+  background: var(--navy-deep); /* Force dark background */
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--glass-border);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
   transition: var(--transition-smooth);
+  color: white; /* Force white text */
+}
+
+header a, header .nav-link-item, header .btn-icon-luxe {
+  color: white !important;
+}
+
+header .btn-icon-luxe:hover {
+  border-color: var(--gold-primary);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .hero-v2 {
@@ -142,18 +152,70 @@ header {
 .logo-wrap {
   display: flex;
   align-items: center;
-  gap: 0; 
+  gap: 15px; 
+}
+
+.logo-luxe {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.logo-icon-box {
+  width: 45px;
+  height: 45px;
+  background: var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: white;
+  font-size: 1.4rem;
+  box-shadow: 0 4px 15px rgba(197, 160, 40, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-icon-box::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.2), transparent);
+  transform: rotate(45deg);
+  animation: logo-shine 3s infinite;
+}
+
+@keyframes logo-shine {
+  0% { transform: translate(-100%, -100%) rotate(45deg); }
+  100% { transform: translate(100%, 100%) rotate(45deg); }
+}
+
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.logo-luxe:hover {
+  transform: translateY(-2px);
+}
+
+.logo-luxe:hover .logo-icon-box {
+  background: var(--gold-light);
+  transform: rotate(5deg);
 }
 
 .logo-img {
-  height: 55px;
-  width: auto;
-  object-fit: contain;
-  transition: transform 0.3s ease;
-}
-
-.logo-img:hover {
-  transform: scale(1.05);
+  display: none; /* Hide old logo image */
 }
 
 .nav-links-center {
@@ -183,7 +245,8 @@ header {
   transform: translateX(-50%);
 }
 
-.nav-link-item:hover::after {
+.nav-link-item:hover::after,
+.nav-link-item.active::after {
   width: 100%;
 }
 
@@ -197,7 +260,7 @@ header {
   top: 100%;
   left: 50%;
   transform: translateX(-50%) translateY(20px);
-  background: var(--bg-color);
+  background: var(--navy-base); /* Force dark dropdown */
   min-width: 220px;
   padding: 15px 0;
   border-radius: var(--border-radius-sm);
@@ -205,7 +268,16 @@ header {
   opacity: 0;
   visibility: hidden;
   transition: var(--transition-smooth);
-  border: 1px solid var(--glass-border);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-child a {
+  color: white !important;
+}
+
+.dropdown-link:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--gold-primary) !important;
 }
 
 .dropdown-parent:hover .dropdown-child {
@@ -480,15 +552,27 @@ section {
 /* Responsive Perfection */
 /* FOOTER THEME CONSISTENCY */
 footer {
+  padding: 100px 0;
+  background: var(--navy-deep) !important;
   color: white !important;
 }
 
-footer h2, footer h3, footer h4, footer a {
+footer a {
+  color: white !important;
+  opacity: 0.7;
+}
+
+footer a:hover {
+  color: var(--gold-primary) !important;
+  opacity: 1;
+}
+
+footer h4 {
   color: white !important;
 }
 
 footer p {
-  color: rgba(255,255,255,0.7) !important;
+  color: rgba(255, 255, 255, 0.6) !important;
 }
 
 @media (max-width: 1200px) {
@@ -509,7 +593,13 @@ footer p {
   /* MOBILE HEADER ACTIONS */
   .mobile-toggle { 
     display: flex !important; 
+    align-items: center;
+    justify-content: center;
   }
+  
+  .logo-text { font-size: 1.1rem !important; letter-spacing: 0.5px; }
+  .logo-icon-box { width: 32px !important; height: 32px !important; font-size: 0.9rem !important; }
+  .logo-wrap { gap: 8px !important; }
   
   .nav-actions-right {
     gap: 15px !important;
@@ -622,6 +712,13 @@ footer p {
   transition: color 0.3s;
 }
 
+.mobile-nav a.active {
+  color: var(--gold-primary);
+  border-left: 4px solid var(--gold-primary);
+  padding-left: 15px;
+  font-weight: 600;
+}
+
 .mobile-submenu {
   max-height: 0;
   overflow: hidden;
@@ -673,8 +770,8 @@ footer p {
 }
 
 .mobile-toggle.active {
-  opacity: 0;
-  pointer-events: none;
+  background: var(--gold-primary);
+  border-color: var(--gold-primary);
 }
 
 .mobile-close-btn {

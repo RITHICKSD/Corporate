@@ -90,8 +90,27 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(el);
   });
 
+  // Active Nav Highlighting
+  const currentPath = window.location.pathname.split("/").pop() || 'index.html';
+  
+  // Desktop Nav
+  document.querySelectorAll('.nav-link-item').forEach(link => {
+    const linkPath = link.getAttribute('href');
+    if (linkPath === currentPath) {
+      link.classList.add('active');
+    }
+  });
+
+  // Mobile Nav
+  document.querySelectorAll('.mobile-nav a').forEach(link => {
+    const linkPath = link.getAttribute('href');
+    if (linkPath === currentPath) {
+      link.classList.add('active');
+    }
+  });
+
   // Logo Animation (simple)
-  const logo = document.querySelector('.logo');
+  const logo = document.querySelector('.logo-luxe');
   if(logo) {
     logo.style.opacity = '0';
     setTimeout(() => {
