@@ -314,9 +314,11 @@ header .btn-icon-luxe:hover {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  font-size: 1.2rem;
+  font-size: 0.95rem;
+  font-weight: 700;
   color: var(--text-color);
   transition: var(--transition-smooth);
+  letter-spacing: 0.5px;
 }
 
 .btn-icon-luxe:hover {
@@ -595,14 +597,22 @@ footer p {
     display: flex !important; 
     align-items: center;
     justify-content: center;
+    width: 36px !important;
+    height: 36px !important;
   }
   
-  .logo-text { font-size: 1.1rem !important; letter-spacing: 0.5px; }
-  .logo-icon-box { width: 32px !important; height: 32px !important; font-size: 0.9rem !important; }
-  .logo-wrap { gap: 8px !important; }
+  .logo-text { font-size: 0.9rem !important; letter-spacing: 0.5px; }
+  .logo-icon-box { width: 28px !important; height: 28px !important; font-size: 0.8rem !important; }
+  .logo-wrap { gap: 5px !important; }
   
   .nav-actions-right {
-    gap: 15px !important;
+    gap: 6px !important;
+  }
+
+  .nav-actions-right .btn-icon-luxe {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 0.8rem !important;
   }
 
   [dir="rtl"] .nav-actions-right {
@@ -755,16 +765,15 @@ footer p {
 .mobile-toggle {
   display: none;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
   cursor: pointer;
   z-index: 4000;
-  padding: 10px;
   transition: all 0.3s ease;
-  width: 45px;
-  height: 45px;
-  background: var(--glass-bg);
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.12);
   border-radius: 50%;
-  border: 1px solid var(--glass-border);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   align-items: center;
   justify-content: center;
 }
@@ -805,8 +814,8 @@ footer p {
 
 .mobile-toggle span {
   width: 25px;
-  height: 3px;
-  background: var(--text-color);
+  height: 2px;
+  background: white;
   transition: 0.3s;
   border-radius: 2px;
 }

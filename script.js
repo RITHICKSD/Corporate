@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentDir = htmlElement.getAttribute('dir');
     const newDir = currentDir === 'rtl' ? 'ltr' : 'rtl';
     htmlElement.setAttribute('dir', newDir);
+    rtlToggle.textContent = newDir.toUpperCase();
     localStorage.setItem('dir', newDir);
     
     // Update body class for specific RTL styling if needed
@@ -35,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
   body.setAttribute('data-theme', savedTheme);
   htmlElement.setAttribute('dir', savedDir);
   themeToggle.innerHTML = savedTheme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+  rtlToggle.textContent = savedDir.toUpperCase();
 
   // Mobile Menu Toggle
   const mobileToggle = document.querySelector('.mobile-toggle');
