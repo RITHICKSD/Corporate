@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }, observerOptions);
 
-  document.querySelectorAll('section, .card, .hero-content').forEach(el => {
+  document.querySelectorAll('section, .card, .hero-content, .feature-card, .retreat-card, .stat-item, .team-card, .gallery-item').forEach(el => {
     observer.observe(el);
   });
 
@@ -103,11 +103,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  // Highlight Dropdown Parent triggers on desktop if children are active
+  document.querySelectorAll('.dropdown-child a, .dropdown-link').forEach(link => {
+    const linkPath = link.getAttribute('href');
+    if (linkPath === currentPath) {
+      link.classList.add('active');
+      const parent = link.closest('.dropdown-parent');
+      if (parent) {
+        const parentTrigger = parent.querySelector('.nav-link-item');
+        if (parentTrigger) parentTrigger.classList.add('active');
+      }
+    }
+  });
+
   // Mobile Nav
   document.querySelectorAll('.mobile-nav a').forEach(link => {
     const linkPath = link.getAttribute('href');
     if (linkPath === currentPath) {
       link.classList.add('active');
+      const parentSub = link.closest('.mobile-submenu');
+      if (parentSub) {
+        const parentGroup = parentSub.closest('.mobile-nav-group');
+        if (parentGroup) {
+          const parentTrigger = parentGroup.querySelector('.mobile-dropdown-toggle');
+          if (parentTrigger) parentTrigger.classList.add('active');
+        }
+      }
     }
   });
 

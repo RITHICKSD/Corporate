@@ -17,57 +17,58 @@
 </head>
 <body data-theme="dark">
 
-  <!-- HEADER (Same as Home 1) -->
-  <header>
+  <!-- NAVIGATION HEADER -->
+  <header id="site-header">
     <div class="nav-box">
       <div class="logo-wrap">
-        <a href="index.html" class="logo-luxe">
+        <a href="index.html" class="logo-luxe" id="header-logo-link">
           <div class="logo-icon-box">
-            <i class="fas fa-crown"></i>
+            <i class="fas fa-users"></i>
           </div>
           <span class="logo-text">Elite Events</span>
         </a>
       </div>
-      <nav class="nav-links-center">
-        <div class="dropdown-parent">
-          <a href="index.html" class="nav-link-item">Home <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px; opacity: 0.5;"></i></a>
+
+      <nav class="nav-links-center" id="desktop-nav-menu">
+        <div class="dropdown-parent" id="nav-home-dropdown">
+          <a href="#" class="nav-link-item">Home <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px; opacity: 0.5;"></i></a>
           <div class="dropdown-child">
-            <a href="index.html" class="dropdown-link">Home 1</a>
-            <a href="home2.html" class="dropdown-link">Home 2</a>
+            <a href="index.html" class="dropdown-link" id="nav-home-1"><i class="fas fa-house"></i> Home 1</a>
+            <a href="home2.html" class="dropdown-link" id="nav-home-2"><i class="fas fa-house-chimney"></i> Home 2</a>
           </div>
         </div>
-        <a href="about.html" class="nav-link-item">About</a>
-        <a href="services.html" class="nav-link-item">Services</a>
-        <a href="contact.html" class="nav-link-item">Contact</a>
-        <div class="dropdown-parent">
+        <a href="about.html" class="nav-link-item" id="nav-about">About</a>
+        <a href="services.html" class="nav-link-item" id="nav-services">Services</a>
+        <a href="contact.html" class="nav-link-item" id="nav-contact">Contact</a>
+        <div class="dropdown-parent" id="nav-dashboard-dropdown">
           <a href="#" class="nav-link-item">Dashboard <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px; opacity: 0.5;"></i></a>
           <div class="dropdown-child">
-            <a href="dashboard.html" class="dropdown-link">User Dashboard</a>
-            <a href="admin.html" class="dropdown-link">Admin Dashboard</a>
+            <a href="dashboard.html" class="dropdown-link" id="nav-user-dash"><i class="fas fa-user-tie"></i> User Dashboard</a>
+            <a href="admin.html" class="dropdown-link" id="nav-admin-dash"><i class="fas fa-user-shield"></i> Admin Dashboard</a>
           </div>
         </div>
       </nav>
+
       <div class="nav-actions-right">
         <button class="btn-icon-luxe" id="rtl-toggle" title="Switch Language Direction">LTR</button>
         <button class="btn-icon-luxe" id="theme-toggle" title="Toggle Darkness"><i class="fas fa-moon"></i></button>
-        <div class="mobile-toggle">
+        <div class="mobile-toggle" id="header-mobile-toggle">
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <a href="login.html" class="btn-login-premium">Login</a>
+        <a href="login.html" class="btn-login-premium" id="header-login-btn">Login</a>
       </div>
     </div>
   </header>
 
-  <!-- MOBILE NAV DRAWER (INTERACTIVE) -->
-  <div class="mobile-nav">
-    <button class="mobile-close-btn" aria-label="Close Menu">&times;</button>
+  <!-- MOBILE NAV DRAWER -->
+  <div class="mobile-nav" id="mobile-drawer">
     <div class="mobile-nav-group">
       <a href="#" class="mobile-dropdown-toggle">Home <i class="fas fa-chevron-down" style="font-size: 0.8rem; margin-left: 10px; opacity: 0.5;"></i></a>
       <div class="mobile-submenu">
-        <a href="index.html" class="sub-link">Home 1</a>
-        <a href="home2.html" class="sub-link">Home 2</a>
+        <a href="index.html" class="sub-link" style="font-size: 1.2rem;"><i class="fas fa-house" style="margin-right: 10px;"></i> Home 1</a>
+        <a href="home2.html" class="sub-link" style="font-size: 1.2rem;"><i class="fas fa-house-chimney" style="margin-right: 10px;"></i> Home 2</a>
       </div>
     </div>
     
@@ -76,28 +77,25 @@
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </div>
-
+    
     <div class="mobile-nav-group">
       <a href="#" class="mobile-dropdown-toggle">Dashboard <i class="fas fa-chevron-down" style="font-size: 0.8rem; margin-left: 10px; opacity: 0.5;"></i></a>
       <div class="mobile-submenu">
-        <a href="dashboard.html" class="sub-link">User Dashboard</a>
-        <a href="admin.html" class="sub-link">Admin Dashboard</a>
+        <a href="dashboard.html" class="sub-link" style="font-size: 1.2rem;"><i class="fas fa-user-tie" style="margin-right: 10px;"></i> User Dashboard</a>
+        <a href="admin.html" class="sub-link" style="font-size: 1.2rem;"><i class="fas fa-user-shield" style="margin-right: 10px;"></i> Admin Dashboard</a>
       </div>
-    </div>
-
-    <div class="login-item" style="margin-top: 40px;">
-      <a href="login.html" class="btn-login-premium" style="display: block; text-align: center; font-size: 1.1rem; padding: 20px; border-radius: 12px; font-family: 'Outfit', sans-serif;">Login</a>
     </div>
   </div>
 
   <!-- 1. LUXURY MINIMALIST HERO (Centered Style) -->
-  <section class="hero-v2" style="height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; background: radial-gradient(circle at center, #1A1A1A 0%, #0A0A0A 100%);">
-    <div class="container hero-box">
-      <div style="margin-bottom: 50px;"><span class="accent-tag">The Future of Multi-National Gatherings</span></div>
-      <h1 class="main-title" style="font-size: 5rem; letter-spacing: 0.1em; margin-bottom: 60px;">STRATEGIC <br> CONVERGENCE</h1>
-      <p style="max-width: 800px; margin: 0 auto 70px; opacity: 0.7; font-size: 1.35rem; line-height: 2.1;">Precision planning for the world's most innovative companies. We transform executive objectives into immersive global experiences.</p>
-      <div class="hero-cta-group" style="justify-content: center;">
-        <a href="#solutions" class="btn-login-premium" style="padding: 22px 60px;">Our Solutions</a>
+  <section class="hero-v1" id="section-home2-hero" style="background-image: url('c1.avif'); min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center;">
+    <div class="hero-overlay"></div>
+    <div class="container hero-box" style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto;">
+      <div style="margin-bottom: 30px;"><span class="accent-tag">The Future of Multi-National Gatherings</span></div>
+      <h1 class="main-title" style="font-size: 5rem; letter-spacing: 0.1em; margin-bottom: 40px; color: var(--white) !important; text-align: center; line-height: 1.2;">STRATEGIC <br> CONVERGENCE</h1>
+      <p style="max-width: 800px; margin: 0 auto 50px; opacity: 0.85; font-size: 1.35rem; line-height: 2.1; color: rgba(255, 255, 255, 0.9) !important; text-align: center;">Precision planning for the world's most innovative companies. We transform executive objectives into immersive global experiences.</p>
+      <div class="hero-cta-group" style="justify-content: center; margin-top: 20px;">
+        <a href="#solutions" class="btn-login-premium" style="padding: 16px 45px; border-radius: 50px;">Our Solutions</a>
       </div>
     </div>
   </section>
@@ -209,42 +207,44 @@
     </div>
   </section>
 
-  <!-- FOOTER (Same as Home 1) -->
-  <footer style="padding: 100px 0; background: var(--navy-deep); color: white;">
+  <!-- FOOTER -->
+  <footer id="main-footer">
     <div class="container grid-4">
       <div>
-        <a href="index.html" class="logo-luxe">
-          <div class="logo-icon-box" style="width: 35px; height: 35px; font-size: 1rem;">
-            <i class="fas fa-crown"></i>
-          </div>
-          <span class="logo-text" style="font-size: 1.4rem; font-weight: 900; letter-spacing: 2px;">Elite Events</span>
-        </a>
-        <p style="opacity: 0.6; font-size: 0.9rem; margin-top: 20px;">Setting the standard for corporate excellence since 1998. Globally recognized, locally perfected.</p>
+        <div class="logo-wrap" style="margin-bottom: 25px;">
+          <a href="index.html" class="logo-luxe" style="text-decoration: none;">
+            <div class="logo-icon-box" style="width: 36px; height: 36px; font-size: 1.1rem;">
+              <i class="fas fa-users"></i>
+            </div>
+            <span class="logo-text" style="color: var(--white); font-size: 1.25rem; font-weight: 700; letter-spacing: 1px;">Elite Events</span>
+          </a>
+        </div>
+        <p style="opacity: 0.7; font-size: 0.9rem;">Empowering global corporate forces through advanced experiential learning, curated logistics, and luxury retreats since 2010.</p>
       </div>
       <div>
-        <h4 style="margin-bottom: 30px;">Architecture</h4>
-        <ul style="list-style: none; opacity: 0.6; font-size: 0.9rem; line-height: 2.2;">
-          <li>Strategy Summits</li>
-          <li>Board Retreats</li>
-          <li>Incentive Travel</li>
-          <li>Gala Productions</li>
+        <h4>Services Catalog</h4>
+        <ul style="list-style: none; opacity: 0.8; font-size: 0.9rem; line-height: 2.2;">
+          <li><a href="services.html">Outdoor Quests</a></li>
+          <li><a href="services.html">Lego Serious Play</a></li>
+          <li><a href="services.html">Virtual Escape Rooms</a></li>
+          <li><a href="services.html">Strategic Board Retreats</a></li>
         </ul>
       </div>
       <div>
-        <h4 style="margin-bottom: 30px;">Navigate</h4>
-        <ul style="list-style: none; opacity: 0.6; font-size: 0.9rem; line-height: 2.2;">
-          <li><a href="about.html">Our Identity</a></li>
-          <li><a href="services.html">The Services</a></li>
-          <li><a href="contact.html">Connect</a></li>
-          <li><a href="#">Privacy Policy</a></li>
+        <h4>Navigate Site</h4>
+        <ul style="list-style: none; opacity: 0.8; font-size: 0.9rem; line-height: 2.2;">
+          <li><a href="about.html">Executive Identity</a></li>
+          <li><a href="services.html">Catalogs & Pricing</a></li>
+          <li><a href="contact.html">Incident Concierge</a></li>
+          <li><a href="login.html">Client Key Entry</a></li>
         </ul>
       </div>
       <div>
-        <h4 style="margin-bottom: 30px;">Global Office</h4>
-        <p style="opacity: 0.6; font-size: 0.9rem;">123 Mayfair Avenue<br>London, UK W1J 7JZ<br><br>concierge@eliteevents.com</p>
+        <h4>Global Office</h4>
+        <p style="opacity: 0.7; font-size: 0.9rem; line-height: 2;">123 Mayfair Avenue<br>London, UK W1J 7JZ<br><br><span style="color: var(--brand-primary); font-weight: 500;">concierge@eliteevents.com</span></p>
       </div>
     </div>
-    <div class="container" style="margin-top: 100px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; opacity: 0.4; font-size: 0.8rem;">
+    <div class="container" style="margin-top: 80px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center; opacity: 0.5; font-size: 0.8rem; flex-wrap: wrap; gap: 20px;">
       <p>&copy; 2026 Elite Events Worldwide. All rights Reserved.</p>
       <p>Luxury Partnered by CTEP</p>
     </div>

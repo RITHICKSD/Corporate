@@ -3,267 +3,350 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Identity | Elite Events Worldwide</title>
-  <meta name="description" content="The heritage and vision of the world's most exclusive corporate event curators.">
+  <title>Our Identity & Leadership | Elite Events</title>
+  <meta name="description" content="Discover the strategic mindsets, historic milestones, and certified leadership facilitators powering Elite Events' corporate programs.">
   
   <link rel="icon" type="image/png" href="logo.png">
   <!-- Fonts & Icons -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <link rel="stylesheet" href="style.css">
 </head>
 <body data-theme="dark">
 
-  <!-- HEADER (Same as Home 1) -->
-  <header>
+  <!-- NAVIGATION HEADER -->
+  <header id="site-header">
     <div class="nav-box">
       <div class="logo-wrap">
-        <a href="index.html" class="logo-luxe">
+        <a href="index.html" class="logo-luxe" id="header-logo-link">
           <div class="logo-icon-box">
-            <i class="fas fa-crown"></i>
+            <i class="fas fa-users"></i>
           </div>
           <span class="logo-text">Elite Events</span>
         </a>
       </div>
-      <nav class="nav-links-center">
-        <div class="dropdown-parent">
-          <a href="index.html" class="nav-link-item">Home <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px; opacity: 0.5;"></i></a>
+
+      <nav class="nav-links-center" id="desktop-nav-menu">
+        <div class="dropdown-parent" id="nav-home-dropdown">
+          <a href="#" class="nav-link-item">Home <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px; opacity: 0.5;"></i></a>
           <div class="dropdown-child">
-            <a href="index.html" class="dropdown-link">Home 1</a>
-            <a href="home2.html" class="dropdown-link">Home 2</a>
+            <a href="index.html" class="dropdown-link" id="nav-home-1"><i class="fas fa-house"></i> Home 1</a>
+            <a href="home2.html" class="dropdown-link" id="nav-home-2"><i class="fas fa-house-chimney"></i> Home 2</a>
           </div>
         </div>
-        <a href="about.html" class="nav-link-item">About</a>
-        <a href="services.html" class="nav-link-item">Services</a>
-        <a href="contact.html" class="nav-link-item">Contact</a>
-        <div class="dropdown-parent">
+        <a href="about.html" class="nav-link-item active" id="nav-about">About</a>
+        <a href="services.html" class="nav-link-item" id="nav-services">Services</a>
+        <a href="contact.html" class="nav-link-item" id="nav-contact">Contact</a>
+        <div class="dropdown-parent" id="nav-dashboard-dropdown">
           <a href="#" class="nav-link-item">Dashboard <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 5px; opacity: 0.5;"></i></a>
           <div class="dropdown-child">
-            <a href="dashboard.html" class="dropdown-link">User Dashboard</a>
-            <a href="admin.html" class="dropdown-link">Admin Dashboard</a>
+            <a href="dashboard.html" class="dropdown-link" id="nav-user-dash"><i class="fas fa-user-tie"></i> User Dashboard</a>
+            <a href="admin.html" class="dropdown-link" id="nav-admin-dash"><i class="fas fa-user-shield"></i> Admin Dashboard</a>
           </div>
         </div>
       </nav>
+
       <div class="nav-actions-right">
         <button class="btn-icon-luxe" id="rtl-toggle" title="Switch Language Direction">LTR</button>
-        <button class="btn-icon-luxe" id="theme-toggle" title="Toggle Darkness"><i class="fas fa-moon"></i></button>
-        <div class="mobile-toggle">
+        <button class="btn-icon-luxe" id="theme-toggle" title="Toggle Theme"><i class="fas fa-sun"></i></button>
+        <div class="mobile-toggle" id="mobile-nav-toggle" aria-label="Toggle Menu">
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <a href="login.html" class="btn-login-premium">Login</a>
+        <a href="login.html" class="btn-login-premium" id="header-login-btn">Login</a>
       </div>
     </div>
   </header>
 
-  <!-- MOBILE NAV DRAWER (INTERACTIVE) -->
-  <div class="mobile-nav">
-    <button class="mobile-close-btn" aria-label="Close Menu">&times;</button>
+  <!-- MOBILE NAV DRAWER -->
+  <div class="mobile-nav" id="mobile-drawer">
     <div class="mobile-nav-group">
       <a href="#" class="mobile-dropdown-toggle">Home <i class="fas fa-chevron-down" style="font-size: 0.8rem; margin-left: 10px; opacity: 0.5;"></i></a>
       <div class="mobile-submenu">
-        <a href="index.html" class="sub-link">Home 1</a>
-        <a href="home2.html" class="sub-link">Home 2</a>
+        <a href="index.html" class="sub-link" style="font-size: 1.2rem;"><i class="fas fa-house" style="margin-right: 10px;"></i> Home 1</a>
+        <a href="home2.html" class="sub-link" style="font-size: 1.2rem;"><i class="fas fa-house-chimney" style="margin-right: 10px;"></i> Home 2</a>
       </div>
     </div>
     
     <div class="mobile-nav-group">
-      <a href="about.html">About</a>
+      <a href="about.html" class="active">About</a>
       <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
     </div>
-
+    
     <div class="mobile-nav-group">
       <a href="#" class="mobile-dropdown-toggle">Dashboard <i class="fas fa-chevron-down" style="font-size: 0.8rem; margin-left: 10px; opacity: 0.5;"></i></a>
       <div class="mobile-submenu">
-        <a href="dashboard.html" class="sub-link">User Dashboard</a>
-        <a href="admin.html" class="sub-link">Admin Dashboard</a>
+        <a href="dashboard.html" class="sub-link" style="font-size: 1.2rem;"><i class="fas fa-user-tie" style="margin-right: 10px;"></i> User Dashboard</a>
+        <a href="admin.html" class="sub-link" style="font-size: 1.2rem;"><i class="fas fa-user-shield" style="margin-right: 10px;"></i> Admin Dashboard</a>
       </div>
     </div>
 
     <div class="login-item" style="margin-top: 40px;">
-      <a href="login.html" class="btn-login-premium" style="display: block; text-align: center; font-size: 1.1rem; padding: 20px; border-radius: 12px; font-family: 'Outfit', sans-serif;">Login</a>
+      <a href="login.html" class="btn-login-premium" style="display: block; text-align: center;">Login</a>
     </div>
   </div>
 
-  <!-- 1. ABOUT HERO - ARCHITECTURAL SPLIT -->
-  <section style="height: 100vh; background: var(--bg-color); padding: 0; display: flex; align-items: stretch; position: relative; overflow: hidden;">
-    <!-- LEFT: CONTENT -->
-    <div style="flex: 1.2; padding: 220px 8% 120px 8%; display: flex; flex-direction: column; justify-content: flex-start; z-index: 10;">
-      <span class="accent-tag" style="margin-bottom: 25px; font-weight: 700; letter-spacing: 3px; color: var(--gold-dark);">Elite Identity | Since 1998</span>
-      <h1 class="main-title" style="font-size: 5.5rem; line-height: 1; letter-spacing: 0.1em; margin-bottom: 50px;">THE <br> HERITAGE <br> MATRIX</h1>
-      <p style="max-width: 500px; line-height: 2.2; color: var(--text-color); opacity: 1; font-size: 1.15rem; font-weight: 400;">An architectural journey through nearly three decades of worldwide elite event curation. We build the stages where global history is discussed.</p>
-    </div>
-    
-    <!-- RIGHT: FRAMED IMAGE COMPOSITION -->
-    <div style="flex: 1.8; position: relative; padding: 100px 50px 100px 0; display: flex; align-items: center; justify-content: flex-end;">
-      <div style="position: relative; width: 90%; height: 80%; border-radius: 40px; overflow: hidden; box-shadow: var(--shadow-premium);">
-        <img src="c10.jpg" alt="Executive Hub" style="width: 100%; height: 100%; object-fit: cover;">
-        <!-- DESIGN ELEMENT: OVERLAY TEXT -->
-        <div style="position: absolute; bottom: 40px; right: 40px; color: white; text-align: right;">
-          <p style="text-transform: uppercase; letter-spacing: 4px; font-weight: 700; font-size: 0.7rem; opacity: 0.6; margin-bottom: 5px;">Project 1998-A</p>
-          <h4 style="font-family: 'Playfair Display', serif; font-size: 1.5rem;">The London Legacy</h4>
-        </div>
+  <!-- 1. ABOUT HERO -->
+  <section id="section-about-hero" class="hero-v1" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=2070'); padding: 180px 0 100px;">
+    <div class="hero-overlay"></div>
+    <div class="container grid-2" style="align-items: center; position: relative; z-index: 2;">
+      <div class="section-head-left" style="margin-bottom: 0;">
+        <span class="accent-tag">Executive Identity</span>
+        <h1>Designing Elite <br><span class="text-gradient">Cohesive Cultures</span></h1>
+        <p style="margin-top: 20px;">Founded on the principle that modern workforce efficiency is governed entirely by team dynamics, Elite Events specializes in formulating immersive strategic retreats and workshops that convert organizational objectives into unified performance.</p>
       </div>
-      <!-- DESIGN ELEMENT: ACCENT LINE -->
-      <div style="position: absolute; top: 50%; left: -20px; width: 140px; height: 1px; background: var(--gold-primary); transform: translateX(-50%); z-index: 5;"></div>
-    </div>
-  </section>
-
-  <!-- 2. MISSION & INTENT - SPLIT -->
-  <section style="background: var(--bg-color);">
-    <div class="container grid-2" style="align-items: center;">
-      <div class="section-head-left">
-        <span class="accent-tag">Our Intent</span>
-        <h2 class="main-title">Defining Future <br> Legacies</h2>
-        <p style="line-height: 2;">We exist to bridge the gap between corporate ambition and cultural resonance. At Elite Events, every summit is curated to not just meet goals, but to establish new benchmarks for organizational identity.</p>
-      </div>
-      <div>
-        <p style="border-left: 2px solid var(--gold-primary); padding-left: 30px; font-style: italic; font-size: 1.25rem;">"We don't just plan events; we architect environments that catalyze human potential and brand alignment."</p>
+      <div style="position: relative;" class="animate" id="about-hero-img-box">
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=2070" alt="Executive team alignment" style="width: 100%; height: 450px; object-fit: cover; border-radius: var(--border-radius-lg); box-shadow: var(--shadow-premium); border: 1px solid var(--glass-border);">
+        <div class="glow-blob glow-blob-accent" style="right: -50px; bottom: -50px;"></div>
       </div>
     </div>
   </section>
 
-  <!-- 3. THE REGISTRY - STAGGERED ERA GRID -->
-  <section style="background: var(--bg-color); padding: 160px 0;">
+  <!-- 2. THE CORE STRATEGIC PILLARS -->
+  <section id="section-about-pillars">
+    <div class="glow-blob" style="left: 10%; top: 20%;"></div>
     <div class="container">
       <div class="section-head-center">
-        <span class="accent-tag">The Evolution Matrix</span>
-        <h2 class="main-title">Legacy Across Eras</h2>
+        <span class="accent-tag accent-tag-alt">Our Foundation</span>
+        <h2>Three Pillars of Cohesive Action</h2>
+        <p>Our structural design methodology goes beyond amusement to address deep team alignment.</p>
       </div>
-      <div class="grid-2" style="margin-top: 100px; gap: 40px;">
-        <!-- ERA 1 -->
-        <div style="background: var(--section-bg-alt); padding: 80px 60px; border-radius: 30px; position: relative; overflow: hidden;">
-          <h4 style="position: absolute; top: -30px; right: 20px; font-size: 10rem; opacity: 0.03; font-weight: 900; pointer-events: none;">1998</h4>
-          <span class="accent-tag" style="background: var(--gold-primary); color: white; padding: 5px 15px; border-radius: 5px; margin-bottom: 20px; display: inline-block;">Phase I: The Foundation</span>
-          <h3 style="font-size: 2rem; margin-bottom: 20px;">Mayfair Boutique Origins</h3>
-          <p style="line-height: 2; opacity: 0.7;">Elite Events began in the heart of London with a singular focus: providing high-stakes discretion for board-level gatherings.</p>
+      
+      <div class="grid-3">
+        <div class="feature-card animate" id="pillar-card-1">
+          <div class="feature-icon"><i class="fas fa-brain"></i></div>
+          <h3>1. Psychological Safety</h3>
+          <p style="font-size: 0.95rem; margin-bottom: 0;">Establishing a trust-filled environment where open communication, rapid ideation, and operational honesty thrive without social friction.</p>
         </div>
-        <!-- ERA 2 -->
-        <div style="background: var(--section-bg-alt); padding: 80px 60px; border-radius: 30px; position: relative; overflow: hidden; margin-top: 60px;">
-          <h4 style="position: absolute; top: -30px; right: 20px; font-size: 10rem; opacity: 0.03; font-weight: 900; pointer-events: none;">2008</h4>
-          <span class="accent-tag" style="background: var(--gold-primary); color: white; padding: 5px 15px; border-radius: 5px; margin-bottom: 20px; display: inline-block;">Phase II: Global Integration</span>
-          <h3 style="font-size: 2rem; margin-bottom: 20px;">The New York Deployment</h3>
-          <p style="line-height: 2; opacity: 0.7;">Launching the Wall Street hub allowed us to synchronize transatlantic strategies for Fortune 500 leadership summits.</p>
+
+        <div class="feature-card animate" id="pillar-card-2">
+          <div class="feature-icon"><i class="fas fa-arrows-to-eye"></i></div>
+          <h3>2. Goal Convergence</h3>
+          <p style="font-size: 0.95rem; margin-bottom: 0;">Aligning individual capabilities and personal motivations with high-level corporate roadmap metrics, ensuring clear unified vision.</p>
         </div>
-        <!-- ERA 3 -->
-        <div style="background: var(--section-bg-alt); padding: 80px 60px; border-radius: 30px; position: relative; overflow: hidden;">
-          <h4 style="position: absolute; top: -30px; right: 20px; font-size: 10rem; opacity: 0.03; font-weight: 900; pointer-events: none;">2018</h4>
-          <span class="accent-tag" style="background: var(--gold-primary); color: white; padding: 5px 15px; border-radius: 5px; margin-bottom: 20px; display: inline-block;">Phase III: Digital Sync</span>
-          <h3 style="font-size: 2rem; margin-bottom: 20px;">Technological Ecosystems</h3>
-          <p style="line-height: 2; opacity: 0.7;">Introduction of our proprietary tech stack, enabling real-time coordination for thousands of delegates across continents.</p>
-        </div>
-        <!-- ERA 4 -->
-        <div style="background: var(--section-bg-alt); padding: 80px 60px; border-radius: 30px; position: relative; overflow: hidden; margin-top: 60px;">
-          <h4 style="position: absolute; top: -30px; right: 20px; font-size: 10rem; opacity: 0.03; font-weight: 900; pointer-events: none;">2026</h4>
-          <span class="accent-tag" style="background: var(--gold-primary); color: white; padding: 5px 15px; border-radius: 5px; margin-bottom: 20px; display: inline-block;">Phase IV: The Future</span>
-          <h3 style="font-size: 2rem; margin-bottom: 20px;">Architectural Convergence</h3>
-          <p style="line-height: 2; opacity: 0.7;">Today, we operate in 45 cities, curating zero-latency experiences where humanity and strategy meet perfectly.</p>
+
+        <div class="feature-card animate" id="pillar-card-3">
+          <div class="feature-icon"><i class="fas fa-award"></i></div>
+          <h3>3. Immersive Leadership</h3>
+          <p style="font-size: 0.95rem; margin-bottom: 0;">Challenging top-tier corporate managers through active event scenarios designed to test fast coordination and resource deployment.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 4. BOARD OF DIRECTORS - PHOTO GRID -->
-  <section>
+  <!-- 3. KEY CORPORATE PERFORMANCE STATS -->
+  <section id="section-about-stats" style="background: var(--bg-color-alt);">
+    <div class="container">
+      <div class="milestones-box animate" id="about-stats-container">
+        <div class="grid-4" style="text-align: center;">
+          <div class="stat-item animate" id="about-stat-1">
+            <h3 class="text-gradient">98.6%</h3>
+            <p>CSAT SATISFACTION</p>
+          </div>
+          <div class="stat-item animate" id="about-stat-2">
+            <h3 class="text-gradient">250+</h3>
+            <p>FORTUNE 500 CLIENTS</p>
+          </div>
+          <div class="stat-item animate" id="about-stat-3">
+            <h3 class="text-gradient">45</h3>
+            <p>REGIONAL HQ CITIES</p>
+          </div>
+          <div class="stat-item animate" id="about-stat-4">
+            <h3 class="text-gradient">15+ Yrs</h3>
+            <p>ACTIVE INDUSTRY LEAD</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. GROWTH & EVOLUTIONARY ERAS -->
+  <section id="section-about-eras">
+    <div class="glow-blob glow-blob-accent" style="right: 5%; top: 10%;"></div>
     <div class="container">
       <div class="section-head-center">
-        <span class="accent-tag">Leadership</span>
-        <h2 class="main-title">The Architects</h2>
+        <span class="accent-tag">The Timeline</span>
+        <h2>Evolution of Strategic Engagement</h2>
+        <p>A history detailing our structural growth from a local boutique provider into a global enterprise asset.</p>
       </div>
-      <div class="grid-3" style="width: 100%; margin-top: 80px; text-align: center;">
-        <div>
-          <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=2070" alt="CEO" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; margin-bottom: 25px;">
-          <h3>Julian Thorne</h3>
-          <p style="opacity: 0.6; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px;">Founder & CEO</p>
+      
+      <div class="evolution-timeline">
+        <!-- Era 1 -->
+        <div class="timeline-node animate" id="era-node-1">
+          <div class="feature-card" style="margin-left: 20px; padding: 45px 40px;">
+            <h4 class="era-number">2010</h4>
+            <h3 style="color: var(--brand-primary);">The Genesis Year</h3>
+            <p style="margin-bottom: 0;">Elite Events was established in London as a specialized group mechanics boutique, deploying early outdoor scavenger programs for nearby technology organizations.</p>
+          </div>
         </div>
-        <div>
-          <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=2069" alt="VP" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; margin-bottom: 25px;">
-          <h3>Elena Rossi</h3>
-          <p style="opacity: 0.6; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px;">Chief Curator</p>
+
+        <!-- Era 2 -->
+        <div class="timeline-node animate" id="era-node-2">
+          <div class="feature-card" style="margin-left: 20px; padding: 45px 40px;">
+            <h4 class="era-number">2016</h4>
+            <h3 style="color: var(--brand-accent);">Continental Expansion</h3>
+            <p style="margin-bottom: 0;">Expanded our physical facilitation operations across 12 European business hubs, introducing custom design-thinking structural challenges and premium alpine executive retreats.</p>
+          </div>
         </div>
-        <div>
-          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=2070" alt="CSO" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; margin-bottom: 25px;">
-          <h3>Marcus Chen</h3>
-          <p style="opacity: 0.6; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 2px;">Strategy Officer</p>
+
+        <!-- Era 3 -->
+        <div class="timeline-node animate" id="era-node-3">
+          <div class="feature-card" style="margin-left: 20px; padding: 45px 40px;">
+            <h4 class="era-number">2021</h4>
+            <h3 style="color: var(--brand-secondary);">Digital Transition</h3>
+            <p style="margin-bottom: 0;">Pioneered proprietary digital escape environments and highly immersive hybrid team challenges to keep remote global workforces unified during major remote shift periods.</p>
+          </div>
+        </div>
+
+        <!-- Era 4 -->
+        <div class="timeline-node animate" id="era-node-4">
+          <div class="feature-card" style="margin-left: 20px; padding: 45px 40px;">
+            <h4 class="era-number">2026</h4>
+            <h3 style="color: var(--brand-primary);">Precision AI Cohesion</h3>
+            <p style="margin-bottom: 0;">Incorporating personality metrics analytics and post-event automated feedback models to guarantee long-term alignment improvements for all corporate groups.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 5. GLOBAL PRESENCE - STATS & MAP -->
-  <section style="background: var(--navy-deep); color: white;">
-    <div class="container grid-2" style="align-items: center;">
-      <div>
-        <span class="accent-tag">Network</span>
-        <h2 class="main-title" style="color: white;">A Borderless Strategy</h2>
-        <p style="opacity: 0.7; line-height: 2; margin-bottom: 40px;">With offices in London, New York, Dubai, and Singapore, we provide localized expertise with a singular global standard of luxury.</p>
-        <div class="grid-2">
-          <div><h2 style="color: var(--gold-primary);">12</h2><p style="font-size: 0.8rem; opacity: 0.6; text-transform: uppercase;">Regional Offices</p></div>
-          <div><h2 style="color: var(--gold-primary);">45</h2><p style="font-size: 0.8rem; opacity: 0.6; text-transform: uppercase;">Partner Cities</p></div>
+  <!-- 5. CORPORATE LEADERSHIP & FACILITATORS -->
+  <section id="section-about-leadership" style="background: var(--bg-color-alt);">
+    <div class="container">
+      <div class="section-head-center">
+        <span class="accent-tag accent-tag-alt">The Planners</span>
+        <h2>Certified Senior Facilitators</h2>
+        <p>Our direct on-site alignment events are managed exclusively by certified organizational psychologists.</p>
+      </div>
+      
+      <div class="grid-3" style="margin-top: 50px;">
+        <div class="team-card animate" id="team-member-1">
+          <div class="team-avatar-container">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=2070" alt="David Miller">
+          </div>
+          <h3>David Miller, Ph.D.</h3>
+          <p style="color: var(--brand-primary); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 15px;">Director of Activity Design</p>
+          <p style="font-size: 0.9rem; margin-bottom: 0;">Specialist in group behavioral patterns with 15+ years of active field coaching across European technology units.</p>
+        </div>
+
+        <div class="team-card animate" id="team-member-2">
+          <div class="team-avatar-container">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=2069" alt="Sarah Jenkins">
+          </div>
+          <h3>Sarah Jenkins, MBA</h3>
+          <p style="color: var(--brand-accent); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 15px;">Lead Strategic facilitator</p>
+          <p style="font-size: 0.9rem; margin-bottom: 0;">Former operations analyst specializing in aligning multi-national executive boards and corporate mergers.</p>
+        </div>
+
+        <div class="team-card animate" id="team-member-3">
+          <div class="team-avatar-container">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=2070" alt="Robert Blake">
+          </div>
+          <h3>Robert Blake</h3>
+          <p style="color: var(--brand-secondary); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 15px;">Global Logistics Lead</p>
+          <p style="font-size: 0.9rem; margin-bottom: 0;">Oversees premium international safety protocols, exclusive venue sourcing, and multi-country flight arrangements.</p>
         </div>
       </div>
-      <div>
-        <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&q=80&w=2066" alt="Map" style="width: 100%; border-radius: 20px; filter: grayscale(1); opacity: 0.4;">
+    </div>
+  </section>
+
+  <!-- 6. CORPORATE CLIENT PARTNERS & INDUSTRIES SERVED -->
+  <section id="section-about-clients">
+    <div class="glow-blob" style="left: 5%; bottom: 10%;"></div>
+    <div class="container">
+      <div class="section-head-center">
+        <span class="accent-tag">Market Scope</span>
+        <h2>Industries We Align Globally</h2>
+        <p>Our systems are customized for diverse industry mechanics, guaranteeing relevant challenges.</p>
+      </div>
+      
+      <div class="grid-4" style="gap: 30px;">
+        <div class="feature-card animate" id="industry-card-1" style="text-align: center; padding: 45px 30px;">
+          <div class="feature-icon" style="margin: 0 auto 25px;"><i class="fas fa-laptop-code"></i></div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 10px;">Tech Enterprises</h3>
+          <p style="font-size: 0.88rem; margin-bottom: 0;">Addressing remote friction, agile cross-team dependency issues, and product team alignments.</p>
+        </div>
+
+        <div class="feature-card animate" id="industry-card-2" style="text-align: center; padding: 45px 30px;">
+          <div class="feature-icon" style="margin: 0 auto 25px; background: linear-gradient(135deg, var(--brand-accent) 0%, var(--brand-primary) 100%);"><i class="fas fa-sack-dollar"></i></div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 10px;">Financial Services</h3>
+          <p style="font-size: 0.88rem; margin-bottom: 0;">Fostering trust under high regulatory strain, strategic compliance reviews, and analytical collaborations.</p>
+        </div>
+
+        <div class="feature-card animate" id="industry-card-3" style="text-align: center; padding: 45px 30px;">
+          <div class="feature-icon" style="margin: 0 auto 25px; background: linear-gradient(135deg, var(--brand-secondary) 0%, var(--brand-primary) 100%);"><i class="fas fa-dna"></i></div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 10px;">BioTech & Pharma</h3>
+          <p style="font-size: 0.88rem; margin-bottom: 0;">Uniting rigorous medical experts with marketing segments, smoothing long developmental cycle syncs.</p>
+        </div>
+
+        <div class="feature-card animate" id="industry-card-4" style="text-align: center; padding: 45px 30px;">
+          <div class="feature-icon" style="margin: 0 auto 25px;"><i class="fas fa-bolt"></i></div>
+          <h3 style="font-size: 1.2rem; margin-bottom: 10px;">Energy & Heavy Industry</h3>
+          <p style="font-size: 0.88rem; margin-bottom: 0;">Coordinating complex field logistics safety practices and uniting corporate desk segments.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 6. FOUNDER'S STATEMENT - ARCHITECTURAL REDESIGN -->
-  <section style="background: url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=2070') center/cover; padding: 160px 0; position: relative;">
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(5,10,24,0.9);"></div>
-    <div class="container" style="position: relative; z-index: 2; max-width: 1000px; text-align: center;">
-      <div style="border: 1px solid var(--gold-primary); padding: 100px 60px; border-radius: var(--border-radius-lg); backdrop-filter: blur(10px);">
-        <i class="fas fa-quote-left" style="font-size: 2.5rem; color: var(--gold-primary); margin-bottom: 50px;"></i>
-        <h2 class="main-title" style="color: white; font-family: 'Playfair Display', serif; font-style: italic; font-weight: 300; line-height: 1.6; font-size: 2.5rem;">"True luxury is not about excess; it is about the precision of human connection in environments crafted for focused ambition."</h2>
-        <div style="width: 80px; height: 1px; background: var(--gold-primary); margin: 60px auto 30px;"></div>
-        <p style="text-transform: uppercase; letter-spacing: 4px; font-weight: 700; color: var(--gold-primary); font-size: 0.9rem;">Julian Thorne | Founding Visionary</p>
+  <!-- 7. ENTERPRISE VISION STATEMENT & CALL TO ACTION -->
+  <section id="section-about-vision-cta" style="background: var(--bg-color-alt);">
+    <div class="container">
+      <div class="cta-banner-box animate" id="about-closing-card" style="text-align: center;">
+        <span class="accent-tag" style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15); color: var(--white);">Our Ultimate Mandate</span>
+        <h2 style="color: var(--white); margin-bottom: 20px;">Moving Teams from Friction to Synergy</h2>
+        <p style="color: rgba(255,255,255,0.7); max-width: 650px; margin: 0 auto 40px;">Our global vision is to systematically eliminate professional alignment hurdles, letting employees thrive in safe, collaborative corporate cultures.</p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+          <a href="contact.html" class="btn-login-premium" style="background: var(--white); color: var(--navy-deep); font-weight: 700;">Initiate Corporate Planning</a>
+          <a href="services.html" class="btn-icon-luxe" style="width: auto; height: auto; padding: 12px 30px; border-radius: 50px; border-color: var(--white); color: var(--white);"><i class="fas fa-eye" style="margin-right: 8px;"></i> View Activity Catalog</a>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER (Same as Home 1) -->
-  <footer style="padding: 100px 0; background: var(--navy-deep); color: white;">
+  <!-- FOOTER -->
+  <footer id="main-footer">
     <div class="container grid-4">
       <div>
-        <a href="index.html" class="logo-luxe">
-          <div class="logo-icon-box" style="width: 35px; height: 35px; font-size: 1rem;">
-            <i class="fas fa-crown"></i>
-          </div>
-          <span class="logo-text" style="font-size: 1.4rem; font-weight: 900; letter-spacing: 2px;">Elite Events</span>
-        </a>
-        <p style="opacity: 0.6; font-size: 0.9rem; margin-top: 20px;">Setting the standard for corporate excellence since 1998. Globally recognized, locally perfected.</p>
+        <div class="logo-wrap" style="margin-bottom: 25px;">
+          <a href="index.html" class="logo-luxe" style="text-decoration: none;">
+            <div class="logo-icon-box" style="width: 36px; height: 36px; font-size: 1.1rem;">
+              <i class="fas fa-users"></i>
+            </div>
+            <span class="logo-text" style="color: var(--white); font-size: 1.25rem; font-weight: 700; letter-spacing: 1px;">Elite Events</span>
+          </a>
+        </div>
+        <p style="opacity: 0.7; font-size: 0.9rem;">Empowering global corporate forces through advanced experiential learning, curated logistics, and luxury retreats since 2010.</p>
       </div>
       <div>
-        <h4 style="margin-bottom: 30px;">Architecture</h4>
-        <ul style="list-style: none; opacity: 0.6; font-size: 0.9rem; line-height: 2.2;">
-          <li>Strategy Summits</li>
-          <li>Board Retreats</li>
-          <li>Incentive Travel</li>
-          <li>Gala Productions</li>
+        <h4>Services Catalog</h4>
+        <ul style="list-style: none; opacity: 0.8; font-size: 0.9rem; line-height: 2.2;">
+          <li><a href="services.html">Outdoor Quests</a></li>
+          <li><a href="services.html">Lego Serious Play</a></li>
+          <li><a href="services.html">Virtual Escape Rooms</a></li>
+          <li><a href="services.html">Strategic Board Retreats</a></li>
         </ul>
       </div>
       <div>
-        <h4 style="margin-bottom: 30px;">Navigate</h4>
-        <ul style="list-style: none; opacity: 0.6; font-size: 0.9rem; line-height: 2.2;">
-          <li><a href="about.html">Our Identity</a></li>
-          <li><a href="services.html">The Services</a></li>
-          <li><a href="contact.html">Connect</a></li>
-          <li><a href="#">Privacy Policy</a></li>
+        <h4>Navigate Site</h4>
+        <ul style="list-style: none; opacity: 0.8; font-size: 0.9rem; line-height: 2.2;">
+          <li><a href="about.html">Executive Identity</a></li>
+          <li><a href="services.html">Catalogs & Pricing</a></li>
+          <li><a href="contact.html">Incident Concierge</a></li>
+          <li><a href="login.html">Client Key Entry</a></li>
         </ul>
       </div>
       <div>
-        <h4 style="margin-bottom: 30px;">Global Office</h4>
-        <p style="opacity: 0.6; font-size: 0.9rem;">123 Mayfair Avenue<br>London, UK W1J 7JZ<br><br>concierge@eliteevents.com</p>
+        <h4>Corporate Head Office</h4>
+        <p style="opacity: 0.7; font-size: 0.9rem; line-height: 1.8;">123 Business Way<br>Tech Corridor, District 4<br>Phone: +1 (800) 123-4567<br>Email: hello@eliteevents.com</p>
       </div>
     </div>
-    <div class="container" style="margin-top: 100px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; opacity: 0.4; font-size: 0.8rem;">
-      <p>&copy; 2026 Elite Events Worldwide. All rights Reserved.</p>
-      <p>Luxury Partnered by CTEP</p>
+    <div class="container" style="margin-top: 60px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.08); text-align: center; opacity: 0.5; font-size: 0.8rem;">
+      <p>&copy; 2026 Elite Events. All rights reserved. Strategic layout powered by CTEP.</p>
     </div>
   </footer>
 
