@@ -1232,6 +1232,44 @@ footer p {
   }
 }
 
+/* 360px Ultra-Small Screen Fixes (Home2 Hero & General Layout) */
+@media (max-width: 360px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  /* Home2 hero — prevent title overflow at 360px */
+  #section-home2-hero h1,
+  #home2-hero-title {
+    font-size: 1.85rem !important;
+    letter-spacing: 0.02em !important;
+    line-height: 1.25 !important;
+    word-break: break-word;
+  }
+
+  #section-home2-hero p {
+    font-size: 0.9rem !important;
+    line-height: 1.7 !important;
+    padding: 0 8px !important;
+  }
+
+  #section-home2-hero .hero-cta-group {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #section-home2-hero .btn-login-premium {
+    width: 100%;
+    text-align: center;
+    padding: 14px 20px !important;
+  }
+
+  /* Prevent stat grids from squishing */
+  .grid-4 {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
 /* 15. RTL LAYOUT INTEGRATION */
 [dir="rtl"] {
   direction: rtl;

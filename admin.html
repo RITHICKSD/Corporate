@@ -175,14 +175,12 @@
         transition: left 0.3s ease;
       }
       .admin-sidebar.active { left: 0; }
-
-      /* Hamburger button: gold bg + white lines for max visibility */
       .mobile-toggle {
-        background: var(--gold-primary, #C9A84C) !important;
-        border: none !important;
+        background: rgba(255,255,255,0.05) !important;
+        border: 1px solid rgba(255,255,255,0.1) !important;
         border-radius: 50% !important;
-        width: 44px !important;
-        height: 44px !important;
+        width: 40px !important;
+        height: 40px !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
@@ -193,8 +191,8 @@
       .mobile-toggle span {
         background: #fff !important;
         display: block !important;
-        width: 22px !important;
-        height: 2.5px !important;
+        width: 20px !important;
+        height: 2px !important;
         border-radius: 2px !important;
         margin: 0 !important;
         opacity: 1 !important;
@@ -240,19 +238,23 @@
       <a href="#" class="sidebar-nav-item"><i class="fas fa-server"></i> Node Integrity</a>
       <a href="#" class="sidebar-nav-item"><i class="fas fa-file-invoice-dollar"></i> Global Ledger</a>
       <a href="#" class="sidebar-nav-item"><i class="fas fa-user-shield"></i> Security Auth</a>
-      <a href="index.html" class="sidebar-nav-item"><i class="fas fa-sign-out-alt"></i> Control Exit</a>
+      <a href="index.html" class="sidebar-nav-item" id="admin-logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
     </div>
 
     <div class="sidebar-footer">
-      <div class="sidebar-actions">
-        <button class="btn-icon-luxe" id="rtl-toggle" style="background: rgba(255,255,255,0.05); color: white;">LTR</button>
-        <button class="btn-icon-luxe" id="theme-toggle" style="background: rgba(255,255,255,0.05); color: white;"><i class="fas fa-moon"></i></button>
-      </div>
+      <a href="index.html" class="sidebar-nav-item" style="color: rgba(255,255,255,0.5); font-size: 0.8rem; padding: 10px 20px;"><i class="fas fa-arrow-left" style="width: 16px;"></i> Back to Site</a>
     </div>
   </aside>
 
   <!-- MAIN ADMIN CONTENT -->
   <main class="admin-main">
+    <div class="dashboard-content-controls" style="display: flex; justify-content: flex-end; align-items: center; gap: 15px; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid var(--glass-border);">
+      <button class="btn-icon-luxe" id="rtl-toggle" title="Switch Language Direction" style="background: rgba(255,255,255,0.05); color: inherit; border-color: var(--glass-border); width: 42px; height: 42px; font-size: 0.8rem; border-radius: var(--border-radius-sm);">LTR</button>
+      <button class="btn-icon-luxe" id="theme-toggle" title="Toggle Light/Dark Theme" style="background: rgba(255,255,255,0.05); color: inherit; border-color: var(--glass-border); width: 42px; height: 42px; font-size: 1rem; border-radius: var(--border-radius-sm);"><i class="fas fa-sun"></i></button>
+      <div class="profile-avatar" title="Executive Profile" style="cursor: pointer; display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); transition: var(--transition-smooth); color: var(--brand-primary);">
+        <i class="fas fa-user-circle" style="font-size: 1.5rem;"></i>
+      </div>
+    </div>
     <div style="margin-bottom: 45px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
       <div>
         <span class="accent-tag" style="margin-bottom: 10px; display: inline-block;">Master Strategic Level</span>
